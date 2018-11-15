@@ -1,11 +1,11 @@
 # sapper-template
 
-The default [Sapper](https://github.com/sveltejs/sapper) templates, with branches for Rollup and Webpack. To clone it and get started:
+The default [Sapper](https://github.com/sveltejs/sapper) templates, with branches for Rollup and webpack. To clone it and get started:
 
 ```bash
 # for Rollup
 npx degit sveltejs/sapper-template#rollup my-app
-# for Webpack
+# for webpack
 npx degit sveltejs/sapper-template#webpack my-app
 cd my-app
 npm install # or yarn!
@@ -56,7 +56,7 @@ There are three simple rules for naming the files that define your routes:
 
 ## Bundler config
 
-Sapper uses Rollup or Webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With Webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever loaders and plugins you'd like.
+Sapper uses Rollup or webpack to provide code-splitting and dynamic imports, as well as compiling your Svelte components. With webpack, it also provides hot module reloading. As long as you don't do anything daft, you can edit the configuration files to add whatever loaders and plugins you'd like.
 
 
 ## Production mode and deployment
@@ -71,11 +71,11 @@ now
 ```
 
 
-## Using external components (Webpack only)
+## Using external components (webpack only)
 
 When using Svelte components installed from npm, such as [@sveltejs/svelte-virtual-list](https://github.com/sveltejs/svelte-virtual-list), Svelte needs the original component source (rather than any precompiled JavaScript that ships with the component). This allows the component to be rendered server-side, and also keeps your client-side app smaller.
 
-Because of that, it's essential that Webpack doesn't treat the package as an *external dependency*. You can either modify the `externals` option in [webpack/server.config.js](webpack/server.config.js), or simply install the package to `devDependencies` rather than `dependencies`, which will cause it to get bundled (and therefore compiled) with your app:
+Because of that, it's essential that webpack doesn't treat the package as an *external dependency*. You can either modify the `externals` option in [webpack/server.config.js](webpack/server.config.js), or simply install the package to `devDependencies` rather than `dependencies`, which will cause it to get bundled (and therefore compiled) with your app:
 
 ```bash
 yarn add -D @sveltejs/svelte-virtual-list

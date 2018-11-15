@@ -20,7 +20,7 @@ git checkout -b webpack
 node _template/build-pkg.js webpack
 git rm -r --cached _template package_template.json rollup.config.js
 git add package.json
-git commit -m 'Sapper template for Webpack'
+git commit -m 'Sapper template for webpack'
 git symbolic-ref HEAD refs/heads/master
 git reset --hard
 
